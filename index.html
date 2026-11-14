@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -17,6 +18,21 @@
         .product-card:hover .product-image {
             transform: scale(1.05);
         }
+        
+        /* Cartoon character animation */
+        @keyframes runAcross {
+            0% { transform: translateX(-20vw); }
+            100% { transform: translateX(110vw); }
+        }
+        .animated-cartoon {
+            position: fixed;
+            bottom: 5%;
+            left: 0;
+            z-index: 50;
+            font-size: 4.5rem;
+            pointer-events: none; /* User ispar click nahi kar payega */
+            animation: runAcross 10s linear infinite; /* 10 seconds me puri screen paar karega, lagatar */
+        }
     </style>
     <script>
         tailwind.config = {
@@ -32,6 +48,9 @@
     </script>
 </head>
 <body class="flex flex-col min-h-screen text-slate-800">
+
+    <!-- Animated Cartoon Character -->
+    <div class="animated-cartoon">🏃‍♂️</div>
 
     <!-- Navigation Bar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
@@ -125,22 +144,22 @@
                 <!-- Product Card 1 -->
                 <div class="product-card flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
                     <div class="relative h-48 overflow-hidden bg-slate-100 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&q=80&w=400&h=300" alt="Smart Watch" class="product-image w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1609081524932-4bf2b4421b87?auto=format&fit=crop&q=80&w=400&h=300" alt="Power Bank" class="product-image w-full h-full object-cover transition-transform duration-500">
                         <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-30% OFF</span>
                     </div>
                     <div class="p-5 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-lg font-bold text-slate-900 line-clamp-2">Ultra Series Smartwatch 8</h3>
+                            <h3 class="text-lg font-bold text-slate-900 line-clamp-2">20000mAh Fast Charging Power Bank</h3>
                         </div>
-                        <p class="text-slate-500 text-sm mb-4 line-clamp-3">Fitness tracker with heart rate monitor, sleep tracking, and 7-day battery life. Water-resistant and compatible with iOS/Android.</p>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-3">Compact and portable charger with 22.5W fast charging output, dual USB ports, and Type-C input/output. Never run out of battery!</p>
                         <div class="mt-auto">
                             <div class="flex items-center justify-between mb-4">
                                 <div>
-                                    <span class="text-xl font-extrabold text-slate-900">₹2,499</span>
-                                    <span class="text-sm text-slate-400 line-through ml-2">₹3,599</span>
+                                    <span class="text-xl font-extrabold text-slate-900">₹999</span>
+                                    <span class="text-sm text-slate-400 line-through ml-2">₹1,999</span>
                                 </div>
                                 <div class="flex items-center text-yellow-400 text-sm">
-                                    ★ 4.5 <span class="text-slate-400 ml-1">(2k+)</span>
+                                    ★ 4.6 <span class="text-slate-400 ml-1">(12k+)</span>
                                 </div>
                             </div>
                             <!-- Replace href with actual affiliate link -->
@@ -154,20 +173,20 @@
                 <!-- Product Card 2 -->
                 <div class="product-card flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-slate-100">
                     <div class="relative h-48 overflow-hidden bg-slate-100 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=400&h=300" alt="Wireless Earbuds" class="product-image w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&q=80&w=400&h=300" alt="Portable Bluetooth Speaker" class="product-image w-full h-full object-cover transition-transform duration-500">
                         <span class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">Bestseller</span>
                     </div>
                     <div class="p-5 flex flex-col flex-grow">
-                        <h3 class="text-lg font-bold text-slate-900 line-clamp-2 mb-2">Noise Cancelling Earbuds Pro</h3>
-                        <p class="text-slate-500 text-sm mb-4 line-clamp-3">Active noise cancellation, deep bass, and up to 40 hours of playtime with the charging case. Bluetooth 5.3 enabled.</p>
+                        <h3 class="text-lg font-bold text-slate-900 line-clamp-2 mb-2">Portable Bluetooth Speaker 360° Sound</h3>
+                        <p class="text-slate-500 text-sm mb-4 line-clamp-3">Waterproof portable speaker with deep bass, 15-hour battery life, and seamless Bluetooth 5.0 connectivity. Perfect for outdoors.</p>
                         <div class="mt-auto">
                             <div class="flex items-center justify-between mb-4">
                                 <div>
-                                    <span class="text-xl font-extrabold text-slate-900">₹1,299</span>
+                                    <span class="text-xl font-extrabold text-slate-900">₹1,499</span>
                                     <span class="text-sm text-slate-400 line-through ml-2">₹2,999</span>
                                 </div>
                                 <div class="flex items-center text-yellow-400 text-sm">
-                                    ★ 4.2 <span class="text-slate-400 ml-1">(5k+)</span>
+                                    ★ 4.8 <span class="text-slate-400 ml-1">(8k+)</span>
                                 </div>
                             </div>
                             <a href="#" target="_blank" class="block w-full text-center bg-slate-900 text-white font-medium py-2.5 rounded-lg hover:bg-primary transition-colors duration-200">
